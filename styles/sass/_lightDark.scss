@@ -1,0 +1,71 @@
+@import "variables";
+@import "mixin";
+
+// general style for light mode
+.flat-demo{
+    background-color: map-get($map: $bg-colors, $key:  secondary-bg-light);
+    
+    .blog-single .modal-content, .portfolio-single .modal-content
+    {
+        background-color: map-get($map: $bg-colors, $key: secondary-bg-light);
+    }
+    .header-sticky{
+        background-color: map-get($map: $bg-colors, $key: bg-lighter);
+    }
+    .menu li a{
+        box-shadow: none;
+
+        &:hover, &.active{
+            box-shadow: none;
+        }
+    }
+    .button-border{
+        box-shadow: none;
+        padding: 0;
+    }
+    .pill-button:hover, 
+    .pill-button.active,
+    .blog-intro, 
+    .contact .form-item .form-group {
+        box-shadow: none;
+    }
+    .pill-button {
+        color:map-get($map: $colors, $key: light);
+    }
+    .image-border{
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+    }
+    .box-border, .box-hover-border, .contact .form-item .form-group {
+        background-color: #fefefe;
+        box-shadow: 3px 3px 8px 0px rgba(145, 145, 145, 0.1) !important;
+        
+    }
+    .services .box-border, .blog .box-border{
+        box-shadow: 0px 0px 16px rgba(145,145,145,.2) !important;
+    }
+}
+
+// general style of dark mode
+.arshia-dark.flat-demo{
+    background-color: map-get($map: $bg-colors, $key:  third-bg-dark);
+  
+    .box-hover-border:hover{
+        box-shadow: none;
+    }
+    .header-sticky {
+        background-color: map-get($map: $bg-colors, $key: bg-dark);
+    }
+    .box-border, 
+    .box-hover-border, 
+    .contact 
+    .form-item 
+    .form-group{
+        background-color: map-get($map: $rgb, $key:  dark);
+        box-shadow: 0px 0px 2px rgba(79, 79, 79, 0.2) !important;
+    }
+    .box-hover-border:hover{
+        box-shadow: none;
+    }
+}
